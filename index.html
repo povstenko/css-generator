@@ -28,22 +28,22 @@
                             <div class="accordion-body">
                                 <p>
                                     <input type="range" id='tl-range' min='0' max='100' value='0'
-                                        oninput="range_border_radius_change()">
+                                        oninput="border_radius_change()">
                                     <input type="text" id='tl-text' value=0 disabled>
                                 </p>
                                 <p>
                                     <input type="range" id='tr-range' min='0' max='100' value='0'
-                                        oninput="range_border_radius_change()">
+                                        oninput="border_radius_change()">
                                     <input type="text" id='tr-text' value=0 disabled>
                                 </p>
                                 <p>
                                     <input type="range" id='bl-range' min='0' max='100' value='0'
-                                        oninput="range_border_radius_change()">
+                                        oninput="border_radius_change()">
                                     <input type="text" id='bl-text' value=0 disabled>
                                 </p>
                                 <p>
                                     <input type="range" id='br-range' min='0' max='100' value='0'
-                                        oninput="range_border_radius_change()">
+                                        oninput="border_radius_change()">
                                     <input type="text" id='br-text' value=0 disabled>
                                 </p>
                             </div>
@@ -59,7 +59,38 @@
                         <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
                             data-bs-parent="#menu">
                             <div class="accordion-body">
-
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bcr-text">Red:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" id='bcr-text' value=0 oninput="background_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bcg-text">Green:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" id='bcg-text' value=0 oninput="background_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bcb-text">Blue:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" id='bcb-text' value=0 oninput="background_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bca-text">Opacity:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" id='bca-text' value=1 oninput="background_color_change()">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

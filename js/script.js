@@ -1,4 +1,4 @@
-function range_border_radius_change() {
+function border_radius_change() {
     let tl_r = document.getElementById('tl-range').value;
     let tr_r = document.getElementById('tr-range').value;
     let bl_r = document.getElementById('bl-range').value;
@@ -19,4 +19,16 @@ function range_border_radius_change() {
 
     ex.style.borderRadius = tl_r + 'px ' + tr_r + 'px ' + br_r + 'px ' + bl_r + 'px';
     code.value = 'border-radius: ' + tl_r + 'px ' + tr_r + 'px ' + br_r + 'px ' + bl_r + 'px;';
+}
+function background_color_change() {
+    let r = document.getElementById('bcr-text').value;
+    let g = document.getElementById('bcg-text').value;
+    let b = document.getElementById('bcb-text').value;
+    let a = document.getElementById('bca-text').value;
+
+    let ex = document.getElementById('example');
+    let code = document.getElementById('code');
+
+    ex.style.backgroundColor = 'rgba('+r+', '+g+', '+b+', '+a+')';
+    code.value = 'background-color: rgba('+r+', '+g+', '+b+', '+a+');';
 }
