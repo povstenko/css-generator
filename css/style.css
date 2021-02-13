@@ -1,7 +1,14 @@
 #example {
     width: 200px;
-    height:200px;
+    height: 200px;
     background-color: palevioletred;
+    text-align: center;
+}
+
+#text {
+    padding: 90px 0;
+    font-size: larger;
+    font-weight: bold;
 }
 
 input[type="text"] {

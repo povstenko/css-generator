@@ -20,6 +20,7 @@ function border_radius_change() {
     ex.style.borderRadius = tl_r + 'px ' + tr_r + 'px ' + br_r + 'px ' + bl_r + 'px';
     code.value = 'border-radius: ' + tl_r + 'px ' + tr_r + 'px ' + br_r + 'px ' + bl_r + 'px;';
 }
+
 function background_color_change() {
     let r = document.getElementById('bcr-text').value;
     let g = document.getElementById('bcg-text').value;
@@ -31,4 +32,17 @@ function background_color_change() {
 
     ex.style.backgroundColor = 'rgba('+r+', '+g+', '+b+', '+a+')';
     code.value = 'background-color: rgba('+r+', '+g+', '+b+', '+a+');';
+}
+
+function font_color_change() {
+    let r = document.getElementById('fcr-text').value;
+    let g = document.getElementById('fcg-text').value;
+    let b = document.getElementById('fcb-text').value;
+    let a = document.getElementById('fca-text').value;
+
+    let text = document.getElementById('text');
+    let code = document.getElementById('code');
+
+    text.style.color = 'rgba('+r+', '+g+', '+b+', '+a+')';
+    code.value = 'color: rgba('+r+', '+g+', '+b+', '+a+');';
 }
