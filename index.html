@@ -12,29 +12,33 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container pt-5">
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
+                <h4>Border-radius</h4>
                 <p>
-                    <input type="range" id='tl-range' min='0' max='100' value='0' oninput="func()">
-                    <input type="text" id='tl-text' value=0>
+                    <input type="range" id='tl-range' min='0' max='100' value='0' oninput="range_border_radius_change()">
+                    <input type="text" id='tl-text' value=0 disabled>
                 </p>
                 <p>
-                    <input type="range" id='tr-range' min='0' max='100' value='0' oninput="func()">
-                    <input type="text" id='tr-text' value=0>
+                    <input type="range" id='tr-range' min='0' max='100' value='0' oninput="range_border_radius_change()">
+                    <input type="text" id='tr-text' value=0 disabled>
                 </p>
                 <p>
-                    <input type="range" id='bl-range' min='0' max='100' value='0' oninput="func()">
-                    <input type="text" id='bl-text' value=0>
+                    <input type="range" id='bl-range' min='0' max='100' value='0' oninput="range_border_radius_change()">
+                    <input type="text" id='bl-text' value=0 disabled>
                 </p>
                 <p>
-                    <input type="range" id='br-range' min='0' max='100' value='0' oninput="func()">
-                    <input type="text" id='br-text' value=0>
+                    <input type="range" id='br-range' min='0' max='100' value='0' oninput="range_border_radius_change()">
+                    <input type="text" id='br-text' value=0 disabled>
                 </p>
             </div>
             <div class="col">
-                <div id="example">
-
+                <div id="example" class="mx-auto">
+                    
+                </div>
+                <div class="mt-5">
+                    <textarea class="form-control" id="code" rows="4" readonly></textarea>
                 </div>
             </div>
         </div>

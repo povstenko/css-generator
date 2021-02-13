@@ -3,3 +3,7 @@
     height:200px;
     background-color: palevioletred;
 }
+
+input[type="text"] {
+    width: 40px;
+}
