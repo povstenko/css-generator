@@ -46,3 +46,31 @@ function font_color_change() {
     text.style.color = 'rgba('+r+', '+g+', '+b+', '+a+')';
     code.value = 'color: rgba('+r+', '+g+', '+b+', '+a+');';
 }
+
+function transform_change() {
+    let sc_r = document.getElementById('sc-range').value/10;
+    let ro_r = document.getElementById('ro-range').value;
+
+    let sc_t = document.getElementById('sc-text');
+    let ro_t = document.getElementById('ro-text');
+
+    let ex = document.getElementById('example');
+    let code = document.getElementById('code');
+
+    sc_t.value = sc_r;
+    ro_t.value = ro_r;
+
+    ex.style.transform = 'scale('+sc_r+') rotate('+ro_r+'deg)';
+    code.value = 'transform: scale('+sc_r+') rotate('+ro_r+');';
+}
+
+function font_change() {
+    let family = document.getElementById('ff-text').value;
+    let name = document.getElementById('fn-text').value;
+
+    let text = document.getElementById('text');
+    let code = document.getElementById('code');
+
+    text.style.fontFamily = name+', '+family;
+    code.value = 'font-family: '+name+', '+family+';';
+}

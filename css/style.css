@@ -1,16 +1,21 @@
 #example {
-    width: 200px;
-    height: 200px;
-    background-color: palevioletred;
-    text-align: center;
+  width: 200px;
+  height: 200px;
+  background-color: palevioletred;
+  text-align: center;
 }
 
 #text {
-    padding: 90px 0;
-    font-size: larger;
-    font-weight: bold;
+  padding: 90px 0;
+  font-size: larger;
+  font-weight: bold;
+  font-family: Gill Sans Extrabold, sans-serif;
 }
 
 input[type="text"] {
-    width: 40px;
+  width: 40px;
 }
+
+input[type="text"].font {
+    width: 100%;
+  }
