@@ -12,20 +12,121 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
+        <div class="container">
+            <a class="navbar-brand" href="#">CSS Generator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
     <div class="container pt-5">
         <div class="row">
             <div class="col">
-                <div class="accordion" id="menu">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading1">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                Border Radius
-                            </button>
-                        </h2>
-                        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
-                            data-bs-parent="#menu">
-                            <div class="accordion-body">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="bg-tab" data-bs-toggle="tab" data-bs-target="#bg"
+                                    type="button" role="tab" aria-controls="bg" aria-selected="true">Background
+                                    Color</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="fc-tab" data-bs-toggle="tab" data-bs-target="#fc"
+                                    type="button" role="tab" aria-controls="fc" aria-selected="false">Font
+                                    Color</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="br-tab" data-bs-toggle="tab" data-bs-target="#br"
+                                    type="button" role="tab" aria-controls="br" aria-selected="false">Border
+                                    Radius</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tr-tab" data-bs-toggle="tab" data-bs-target="#tr"
+                                    type="button" role="tab" aria-controls="tr" aria-selected="false">Transform</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active p-3" id="bg" role="tabpanel" aria-labelledby="bg-tab">
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bcr-text">Red:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='bcr-text' min='0' max='255' value='0'
+                                            oninput="background_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bcg-text">Green:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='bcg-text' min='0' max='255' value='0'
+                                            oninput="background_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bcb-text">Blue:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='bcb-text' min='0' max='255' value='0'
+                                            oninput="background_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="bca-text">Opacity:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='bca-text' min='0' max='10' value='10'
+                                            oninput="background_color_change()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3" id="fc" role="tabpanel" aria-labelledby="fc-tab">
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="fcr-text">Red:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='fcr-text' min='0' max='255' value='0'
+                                            oninput="font_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="fcg-text">Green:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='fcg-text' min='0' max='255' value='0'
+                                            oninput="font_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="fcb-text">Blue:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='fcb-text' min='0' max='255' value='0'
+                                            oninput="font_color_change()">
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <label for="fca-text">Opacity:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="range" id='fca-text' min='0' max='10' value='0'
+                                            oninput="font_color_change()">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3" id="br" role="tabpanel" aria-labelledby="br-tab">
                                 <p>
                                     <input type="range" id='tl-range' min='0' max='100' value='0'
                                         oninput="border_radius_change()">
@@ -47,108 +148,7 @@
                                     <input type="text" id='br-text' value=0 disabled>
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                Background Color
-                            </button>
-                        </h2>
-                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
-                            data-bs-parent="#menu">
-                            <div class="accordion-body">
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="bcr-text">Red:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='bcr-text' value=0 oninput="background_color_change()">
-                                    </div>
-                                </div>
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="bcg-text">Green:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='bcg-text' value=0 oninput="background_color_change()">
-                                    </div>
-                                </div>
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="bcb-text">Blue:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='bcb-text' value=0 oninput="background_color_change()">
-                                    </div>
-                                </div>
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="bca-text">Opacity:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='bca-text' value=1 oninput="background_color_change()">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                Font Color
-                            </button>
-                        </h2>
-                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading2"
-                            data-bs-parent="#menu">
-                            <div class="accordion-body">
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="fcr-text">Red:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='fcr-text' value=0 oninput="font_color_change()">
-                                    </div>
-                                </div>
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="fcg-text">Green:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='fcg-text' value=0 oninput="font_color_change()">
-                                    </div>
-                                </div>
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="fcb-text">Blue:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='fcb-text' value=0 oninput="font_color_change()">
-                                    </div>
-                                </div>
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="fca-text">Opacity:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" id='fca-text' value=1 oninput="font_color_change()">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading4">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                Transform
-                            </button>
-                        </h2>
-                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                            data-bs-parent="#menu">
-                            <div class="accordion-body">
+                            <div class="tab-pane fade p-3" id="tr" role="tabpanel" aria-labelledby="tr-tab">
                                 <div class="row mb-1">
                                     <div class="col-4">
                                         <label for="sc-range">Scale:</label>
@@ -172,42 +172,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading5">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                Font
-                            </button>
-                        </h2>
-                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
-                            data-bs-parent="#menu">
-                            <div class="accordion-body">
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="ff-text">Family:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" class="font" id='ff-text' value="sans-serif" oninput="font_change()">
-                                    </div>
-                                </div>
-                                <div class="row mb-1">
-                                    <div class="col-4">
-                                        <label for="fn-text">Name:</label>
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" class="font" id='fn-text' value="Gill Sans Extrabold" oninput="font_change()">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col">
                 <div id="example" class="mx-auto">
-                    <p id="text">Alina</p>
+                    <p id="text">Text</p>
                 </div>
                 <div class="mt-5">
+                    <button class="btn btn-dark btn-sm mb-2" onclick="copy_code()">Copy</button>
                     <textarea class="form-control" id="code" rows="4" readonly></textarea>
                 </div>
             </div>

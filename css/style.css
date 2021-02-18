@@ -1,7 +1,10 @@
+body {
+  background-color: #F5F5F5;
+}
 #example {
   width: 200px;
   height: 200px;
-  background-color: palevioletred;
+  background-color:steelblue;
   text-align: center;
 }
 

@@ -25,7 +25,7 @@ function background_color_change() {
     let r = document.getElementById('bcr-text').value;
     let g = document.getElementById('bcg-text').value;
     let b = document.getElementById('bcb-text').value;
-    let a = document.getElementById('bca-text').value;
+    let a = document.getElementById('bca-text').value/10;
 
     let ex = document.getElementById('example');
     let code = document.getElementById('code');
@@ -63,14 +63,10 @@ function transform_change() {
     ex.style.transform = 'scale('+sc_r+') rotate('+ro_r+'deg)';
     code.value = 'transform: scale('+sc_r+') rotate('+ro_r+');';
 }
-
-function font_change() {
-    let family = document.getElementById('ff-text').value;
-    let name = document.getElementById('fn-text').value;
-
-    let text = document.getElementById('text');
+function copy_code()
+{
     let code = document.getElementById('code');
 
-    text.style.fontFamily = name+', '+family;
-    code.value = 'font-family: '+name+', '+family+';';
+    code.select();
+    document.execCommand("copy");
 }
